@@ -130,9 +130,28 @@ a:visited {
   justify-content: center;
 }
 
-/* #media {
-  align-self: ;
+/* #refactor {
+  set the size larger than the other two and blur the image
+  Overlay text "Website Refactor" on blurred image
+  
+  when hovering clear the blur and the text
+  expand the image and add box-shadow
+  or find a different interactive design online
 } */
+
+/* #prework {
+    set the size, location, and blur
+    add same interactivity to this image as above
+    add class to parent container to contain interactivity that will be shared by all three images
+
+    Container can hold blur, text, and interactive hovering/clicking
+    probably only need the refactor id selector and can delete this one and landing-page
+ } */
+
+ /* #landing-page {
+    set the size, location, and blur
+    add real link after adding its finishing touches and launching
+  } */
 
 /* Make footer flex container to adjust icon and text positioning */
 footer {
