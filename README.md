@@ -20,6 +20,8 @@ The following image shows the portfolio's appearance and functionality.
 
 ## Credits
 
+Contact icons source: https://github.com/Rush/Font-Awesome-SVG-PNG
+
 ## License
 
 TBD

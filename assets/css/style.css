@@ -6,10 +6,10 @@ body {
     color: rgb(196, 196, 196);
 }
 
-main {
-    
+header {
+    display: flex;
 }
 
-img #github-icon {
-    color: aliceblue;
+main {
+    
 }
