@@ -1,15 +1,83 @@
 * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-    background-color: rgb(33, 33, 40);
-    color: rgb(196, 196, 196);
+  background-color: rgb(33, 33, 40);
+  color: rgb(196, 196, 196);
+  font-family: "Nunito", sans-serif;
 }
 
 header {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+nav {
+  font-size: 2rem;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+nav li {
+  list-style-type: none;
+  padding: 0.5rem;
 }
 
 main {
-    
+  text-align: center;
+  padding: 3rem;
+}
+
+#my-picture {
+  width: 200px;
+  box-shadow: 2px 2px 5px rgb(135, 134, 134);
+  border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  font-size: 150%;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rgb(196, 196, 196);
+}
+
+span[data-info] {
+  position: relative;
+  color: rgb(196, 196, 196);
+  cursor: pointer;
+}
+
+span[data-info]:hover::after {
+  content: attr(data-info);
+  position: absolute;
+  left: 10px;
+  bottom: 125px;
+  min-width: 150px;
+  border-radius: 15px;
+  background-color: white;
+  padding: 12px;
+  color: rgb(33, 33, 40);
+  font-size: 2rem;
+  z-index: 1;
 }

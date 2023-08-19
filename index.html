@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Pete's Portfolio</title>
   </head>
@@ -11,50 +17,68 @@
       <h1>Pete Richards</h1>
       <nav>
         <ul>
-          <li>About Me</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section>
-        <article class="about-me">
+        <article id="about-me">
           <h2>About Me</h2>
           <img
             src="./assets/images/linkedin_profile_pic.jpg"
             alt="Picture of Pete Richards"
+            id="my-picture"
           />
           <!-- Fill in a couple paragraphs of About Me info -->
           <p></p>
         </article>
-        <article class="projects">
+        <article id="projects">
           <h2>Projects</h2>
           <!-- Include thumbnail images of projects that can be clicked as links to their repos or live sites -->
-          <img src="./assets/images/website_refactor_screenshot.png" alt="Image of website refactor site" />
-          <a href="https://prich57.github.io/website-refactor/" target="_blank">Website Refactor</a>
+          <img
+            src="./assets/images/website_refactor_screenshot.png"
+            alt="Image of website refactor site"
+          />
+          <a href="https://prich57.github.io/website-refactor/" target="_blank"
+            >Website Refactor</a
+          >
           <!-- Include brief description of each project -->
           <p></p>
-          <img src="./assets/images/prework_screenshot.png" alt="Image of prework study guide site" />
-          <a href="https://prich57.github.io/prework-study-guide/" target="_blank">Prework Study Guide</a>
+          <img
+            src="./assets/images/prework_screenshot.png"
+            alt="Image of prework study guide site"
+          />
+          <a
+            href="https://prich57.github.io/prework-study-guide/"
+            target="_blank"
+            >Prework Study Guide</a
+          >
           <p></p>
-          <img src="./assets/images/landing_page_screenshot.png" alt="Image of landing page site" />
-          <a href="#">Landing Page</a>
+          <a href="#"><img
+            src="./assets/images/landing_page_screenshot.png"
+            alt="Image of landing page site"
+          />Landing Page</a>
           <p></p>
         </article>
-        <article class="contact">
+        <article id="media">
           <!-- Add icons that work as links to the respective means of contact -->
-          <img src="./assets/images/github-white.png" alt="GitHub icon" />
-          <a href="https://github.com/PRich57" target="_blank" id="github-icon">GitHub</a>
-          <img src="./assets/images/linkedin.png" alt="LinkedIn icon" />
-          <a href="https://linkedin.com/in/peterrichards57" target="_blank">LinkedIn</a>
-          <img src="./assets/images/envelope.png" alt="Envelope icon" />
-          <a href="mailto:pcrichards57@gmail.com?subject = Feedback&body = Message">Email Me</a>
+          <a href="https://github.com/PRich57" target="_blank" id="github-icon">
+            <img src="./assets/images/github-white.png" alt="GitHub icon" />
+          </a>
+
+          <a href="https://linkedin.com/in/peterrichards57" target="_blank">
+            <img src="./assets/images/linkedin.png" alt="LinkedIn icon" />
+          </a>
         </article>
       </section>
+
+      <!-- Sidebar section -->
       <section>
-        <!-- Asides will have supporting info displayed in sidebar -->
+        <!-- Asides will have supporting info -->
         <aside class="topic-1">
           <h3>Topic 1</h3>
           <p></p>
@@ -69,5 +93,15 @@
         </aside>
       </section>
     </main>
+    <footer>
+      <h3>Contact me</h3>
+                
+      <a href="mailto:pcrichards57@gmail.com?subject = Feedback&body = Message">
+        <img src="./assets/images/envelope.png" alt="Envelope icon" />
+        </a>
+      <span data-info="555-555-5555">
+      <img src="./assets/images/phone-square.png" alt="Phone icon">
+      </span>
+    </footer>
   </body>
 </html>
