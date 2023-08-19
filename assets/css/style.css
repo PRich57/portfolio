@@ -22,10 +22,11 @@ header {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 9rem;
 }
 
 nav {
+  text-align: end;
   font-size: 3rem;
   position: fixed;
   top: 10px;
@@ -39,31 +40,59 @@ nav li {
 
 a {
   text-decoration: none;
+  margin: 1rem;
 }
 
 main {
-  text-align: center;
-  padding: 3rem;
+  padding: 0 4rem;
+  border: 10px solid red;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
 }
 
 article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 10px solid green;
+  width: 100%;
+  padding: 10rem;
 }
 
 h2 {
-    font-size: 4rem;
+  font-size: 4rem;
+  align-self: center;
+  padding: 3rem;
+}
+
+div {
+  display: flex;
+  justify-content: flex-start;
 }
 
 #my-picture {
-  width: 200px;
+  align-self: flex-start;
+  max-width: 300px;
   box-shadow: 2px 2px 5px rgb(135, 134, 134);
   border-radius: 15px;
+  margin: 5rem;
+}
+
+img {
+  max-width: 400px;
+  /* filter: blur(10px); */
 }
 
 p {
-    font-size: 2rem;
+  font-size: 2rem;
+  padding: 3rem;
 }
 
 a:hover {
@@ -74,6 +103,25 @@ a:hover {
 
 a:visited {
   color: rgb(196, 196, 196);
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+#media {
+  align-self: ;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 span[data-info] {
