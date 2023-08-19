@@ -1,19 +1,23 @@
+/* Set box-sizing to border-box to negate size calculation and give no margin or padding */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+/* Set font size so rems can scale by 10 */
 html {
   font-size: 62.5%;
 }
 
+/* Set background color, font color, and font family */
 body {
   background-color: rgb(33, 33, 40);
   color: rgb(196, 196, 196);
   font-family: "Nunito", sans-serif;
 }
 
+/* Make header a flex container, wrap content, and add padding */
 header {
   display: flex;
   flex-wrap: wrap;
@@ -21,10 +25,12 @@ header {
   padding: 2rem;
 }
 
+/* Make h1 huge */
 h1 {
   font-size: 9rem;
 }
 
+/* Nav bar aligned to end so it grows left and looks cleaner and make fixed to top right */
 nav {
   text-align: end;
   font-size: 3rem;
@@ -33,21 +39,25 @@ nav {
   right: 10px;
 }
 
+/* Add extra space to list items and remove bullets */
 nav li {
   list-style-type: none;
   padding: 0.5rem;
 }
 
+/* Remove underline from anchors and give them a little extra space */
 a {
   text-decoration: none;
   margin: 1rem;
 }
 
+/* Give main padding on the left and right not top and bottom */
 main {
   padding: 0 4rem;
   border: 10px solid red;
 }
 
+/* Style the overall section element in a column and wrap content */
 section {
   display: flex;
   flex-direction: column;
@@ -57,6 +67,7 @@ section {
   padding: 5rem;
 }
 
+/* Set properties for all articles */
 article {
   display: flex;
   flex-wrap: wrap;
@@ -66,17 +77,20 @@ article {
   padding: 10rem;
 }
 
+/* Set specific h2 properties */
 h2 {
   font-size: 4rem;
   align-self: center;
   padding: 3rem;
 }
 
+/* Create a div for further flex box stylization */
 div {
   display: flex;
   justify-content: flex-start;
 }
 
+/* Set specific properties for about me image */
 #my-picture {
   align-self: flex-start;
   max-width: 300px;
@@ -85,38 +99,42 @@ div {
   margin: 5rem;
 }
 
+/* Set overall image properties */
 img {
   max-width: 400px;
   /* filter: blur(10px); */
 }
 
+/* Style the paragraphs */
 p {
   font-size: 2rem;
   padding: 3rem;
 }
 
+/* Add style to links when hovering */
 a:hover {
   cursor: pointer;
   font-size: 150%;
   text-decoration: underline;
 }
 
+/* Make links stay white rather than turn blue after visiting */
 a:visited {
   color: rgb(196, 196, 196);
 }
 
+/* Make projects a flex container for independent organization */
 #projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-
-
-#media {
+/* #media {
   align-self: ;
-}
+} */
 
+/* Make footer flex container to adjust icon and text positioning */
 footer {
   display: flex;
   flex-direction: column;
@@ -124,12 +142,14 @@ footer {
   justify-content: space-around;
 }
 
+/* Make tooltip */
 span[data-info] {
   position: relative;
   color: rgb(196, 196, 196);
   cursor: pointer;
 }
 
+/* Make tooltip pop-up with phone number when hovering */
 span[data-info]:hover::after {
   content: attr(data-info);
   position: absolute;
