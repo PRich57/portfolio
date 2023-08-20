@@ -71,7 +71,7 @@ section {
 article {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   border: 10px solid green;
   width: 100%;
   padding: 10rem;
@@ -181,4 +181,15 @@ span[data-info]:hover::after {
   color: rgb(33, 33, 40);
   font-size: 2rem;
   z-index: 1;
+}
+
+.icons {
+  display: flex;
+}
+
+/* Reduce phone icon to match size of email icon */
+#phone {
+  height: 130px;
+  width: 130px;
+  padding-top: 8px;
 }
