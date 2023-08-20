@@ -30,13 +30,19 @@ h1 {
   font-size: 9rem;
 }
 
+/* Make header font stand out with white color */
+h1,
+h2 {
+  color: white;
+}
+
 /* Nav bar aligned to end so it grows left and looks cleaner and make fixed to top right */
 nav {
   text-align: end;
   font-size: 3rem;
   position: fixed;
   top: 10px;
-  right: 10px;
+  right: 30px;
 }
 
 /* Add extra space to list items and remove bullets */
@@ -48,13 +54,12 @@ nav li {
 /* Remove underline from anchors and give them a little extra space */
 a {
   text-decoration: none;
-  margin: 1rem;
 }
 
 /* Give main padding on the left and right not top and bottom */
 main {
   padding: 0 4rem;
-  border: 10px solid red;
+  /* border: 10px solid red; */
 }
 
 /* Style the overall section element in a column and wrap content */
@@ -71,8 +76,8 @@ section {
 article {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
-  border: 10px solid green;
+  justify-content: center;
+  /* border: 10px solid green; */
   width: 100%;
   padding: 10rem;
 }
@@ -82,6 +87,7 @@ h2 {
   font-size: 4rem;
   align-self: center;
   padding: 3rem;
+  padding-bottom: 0rem;
 }
 
 /* Create a div for further flex box stylization */
@@ -109,6 +115,7 @@ img {
 p {
   font-size: 2rem;
   padding: 3rem;
+  text-align: justify;
 }
 
 /* Add style to links when hovering */
@@ -148,10 +155,30 @@ a:visited {
     probably only need the refactor id selector and can delete this one and landing-page
  } */
 
- /* #landing-page {
+/* #landing-page {
     set the size, location, and blur
     add real link after adding its finishing touches and launching
   } */
+
+/* Make the media icons stick toward bottom left of viewport and stacked */
+aside {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 10px;
+  bottom: 70px;
+}
+
+.media-links {
+  padding-bottom: 20px;
+  max-width: 20px;
+}
+
+.media-icons {
+  max-width: 90px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
 
 /* Make footer flex container to adjust icon and text positioning */
 footer {
@@ -172,24 +199,26 @@ span[data-info] {
 span[data-info]:hover::after {
   content: attr(data-info);
   position: absolute;
-  left: 10px;
-  bottom: 125px;
-  min-width: 150px;
+  left: 95px;
+  bottom: 30px;
+  min-width: 105px;
   border-radius: 15px;
-  background-color: white;
+  background-color: rgb(196, 196, 196);
   padding: 12px;
   color: rgb(33, 33, 40);
-  font-size: 2rem;
+  font-size: 1.5rem;
   z-index: 1;
 }
 
 .icons {
-  display: flex;
+  /* align-self: baseline; */
+  max-width: 140px;
+  /* margin: 0 10px 28px 28px; */
 }
 
 /* Reduce phone icon to match size of email icon */
 #phone {
-  height: 130px;
+  height: 128px;
   width: 130px;
-  padding-top: 8px;
+  /* padding-top: 10px; */
 }
