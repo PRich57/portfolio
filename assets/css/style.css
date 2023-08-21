@@ -241,14 +241,37 @@ span[data-info]:hover::after {
     font-size: 6rem;
   }
 
-  nav {
-    font-size: 2rem;
-  }  
-}
+  /* Try to make nav a fixed header with a slightly opaque black background
 
-/* @media screen and (max-width: 768px) {
+  maybe remove the ul all together and make the nav flex column to begin with if I can do
+  that and still keep it fixed the way I want it
+  
+  if i can then I should make change flex direction to row here and center it
+
+  !!!or maybe make the nav a fixed hamburger menu when the viewport gets this small!!!
+  */
+  nav {
+    display: flex;
+  }
+
+  nav ul {
+    display: flex;
+    font-size: 1.5rem;
+
+    /* text-align: start;
+    left: 10px; */
+    background-color: black;
+  }
+
   .projects img {
     filter: none;
   }
+
+  img {
+    max-width: 250px;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
 
 } */
