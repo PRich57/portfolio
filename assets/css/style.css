@@ -30,7 +30,7 @@ h1 {
   font-size: 9rem;
 }
 
-/* Make header font stand out with white color */
+/* Make h1 and h2 font stand out with white color */
 h1,
 h2 {
   color: white;
@@ -56,10 +56,21 @@ a {
   text-decoration: none;
 }
 
+/* Add style to links when hovering */
+a:hover {
+  cursor: pointer;
+  font-size: 150%;
+  text-decoration: underline;
+}
+
+/* Make links stay white rather than turn blue after visiting */
+a:visited {
+  color: rgb(196, 196, 196);
+}
+
 /* Give main padding on the left and right not top and bottom */
 main {
   padding: 0 4rem;
-  /* border: 10px solid red; */
 }
 
 /* Style the overall section element in a column and wrap content */
@@ -75,9 +86,7 @@ section {
 /* Set properties for all articles */
 article {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* border: 10px solid green; */
+  align-items: center;
   width: 100%;
   padding: 10rem;
 }
@@ -99,16 +108,21 @@ div {
 /* Set specific properties for about me image */
 #my-picture {
   align-self: flex-start;
-  max-width: 300px;
+  max-width: 350px;
   box-shadow: 2px 2px 5px rgb(135, 134, 134);
   border-radius: 15px;
   margin: 5rem;
 }
 
-/* Set overall image properties */
-img {
+/* Set projects image properties */
+.projects img {
   max-width: 400px;
-  /* filter: blur(10px); */
+  filter: blur(3px);
+}
+
+/* Remove blur when hovering over image */
+.projects img:hover {
+  filter: none;
 }
 
 /* Style the paragraphs */
@@ -116,18 +130,6 @@ p {
   font-size: 2rem;
   padding: 3rem;
   text-align: justify;
-}
-
-/* Add style to links when hovering */
-a:hover {
-  cursor: pointer;
-  font-size: 150%;
-  text-decoration: underline;
-}
-
-/* Make links stay white rather than turn blue after visiting */
-a:visited {
-  color: rgb(196, 196, 196);
 }
 
 /* Make projects a flex container for independent organization */
@@ -169,13 +171,9 @@ aside {
   bottom: 70px;
 }
 
-.media-links {
-  padding-bottom: 20px;
-  max-width: 20px;
-}
-
 .media-icons {
   max-width: 90px;
+  padding: 15px;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
@@ -201,14 +199,18 @@ span[data-info]:hover::after {
   position: absolute;
   left: 95px;
   bottom: 30px;
-  min-width: 105px;
+  min-width: max-content;
   border-radius: 15px;
-  background-color: rgb(196, 196, 196);
+  background-color: white;
   padding: 12px;
   color: rgb(33, 33, 40);
   font-size: 1.5rem;
   z-index: 1;
+  box-shadow: 3px 3px 7px rgb(114, 113, 113);
 }
+
+/* TODO: fix email tooltip so it appears to the left so it doesn't cover phone icon */
+
 
 .icons {
   /* align-self: baseline; */
