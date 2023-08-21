@@ -8,6 +8,7 @@
 /* Set font size so rems can scale by 10 */
 html {
   font-size: 62.5%;
+  width: fit-content;
 }
 
 /* Set background color, font color, and font family */
@@ -70,7 +71,7 @@ a:visited {
 
 /* Give main padding on the left and right not top and bottom */
 main {
-  /* display: flex; */
+  display: flex;
   padding: 0 4rem;
 }
 
@@ -115,15 +116,26 @@ div {
   margin: 5rem;
 }
 
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
 /* Set projects image properties */
 .projects img {
   max-width: 400px;
   filter: blur(3px);
+  padding: 10px;
+
 }
 
 /* Remove blur when hovering over image */
 .projects img:hover {
   filter: none;
+  padding: 5px;
+  box-shadow: 4px 4px 8px rgb(135, 134, 134);
 }
 
 /* Style the paragraphs */
@@ -141,7 +153,7 @@ p {
   justify-content: center;
 }
 
-/* #refactor {
+/* #project1 {
   set the size larger than the other two and blur the image
   Overlay text "Website Refactor" on blurred image
   
@@ -186,6 +198,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
 }
 
 /* Make tooltip */
@@ -227,11 +240,15 @@ span[data-info]:hover::after {
   /* padding-top: 10px; */
 }
 
+@media screen and (max-width: 1200px) {
+  
+}
+
 /* Begin adjusting behavior below 1200px width due to design  */
 @media screen and (max-width: 768px) {
-  main {
+  /* main {
     display: flex;
-  }
+  } */
 
   main, article, header {
     flex-direction: column;
