@@ -128,7 +128,6 @@ div {
   max-width: 400px;
   filter: blur(3px);
   padding: 10px;
-
 }
 
 /* Remove blur when hovering over image */
@@ -226,7 +225,6 @@ span[data-info]:hover::after {
 
 /* TODO: fix email tooltip so it appears to the left so it doesn't cover phone icon */
 
-
 .icons {
   /* align-self: baseline; */
   max-width: 140px;
@@ -240,23 +238,54 @@ span[data-info]:hover::after {
   /* padding-top: 10px; */
 }
 
+/* Remove hover image blur as viewport approaches touchscreen device width */
 @media screen and (max-width: 1200px) {
-  
-}
-
-/* Begin adjusting behavior below 1200px width due to design  */
-@media screen and (max-width: 768px) {
-  /* main {
-    display: flex;
-  } */
-
-  main, article, header {
+  main,
+  article {
     flex-direction: column;
   }
-
+  
+  header {
+    padding: 3rem;
+  }
+  
   h1 {
+    margin-top: 15px;
     font-size: 6rem;
   }
+
+  .projects img {
+    filter: none;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    background-color: black;
+    background-size: cover;
+    opacity: 70%;
+  }
+  
+  img {
+    max-width: 250px;
+  }
+  
+  .projects {
+    align-items: center;
+  }
+}
+
+/* Begin adjusting layout below 768px width to fit contents within viewport without overlap  */
+@media screen and (max-width: 768px) {
 
   /* Try to make nav a fixed header with a slightly opaque black background
 
@@ -267,26 +296,7 @@ span[data-info]:hover::after {
 
   !!!or maybe make the nav a fixed hamburger menu when the viewport gets this small!!!
   */
-  nav {
-    display: flex;
-  }
 
-  nav ul {
-    display: flex;
-    font-size: 1.5rem;
-
-    /* text-align: start;
-    left: 10px; */
-    background-color: black;
-  }
-
-  .projects img {
-    filter: none;
-  }
-
-  img {
-    max-width: 250px;
-  }
 }
 
 /* @media screen and (max-width: 768px) {
