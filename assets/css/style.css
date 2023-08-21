@@ -70,6 +70,7 @@ a:visited {
 
 /* Give main padding on the left and right not top and bottom */
 main {
+  /* display: flex; */
   padding: 0 4rem;
 }
 
@@ -107,7 +108,7 @@ div {
 
 /* Set specific properties for about me image */
 #my-picture {
-  align-self: flex-start;
+  /* align-self: flex-start; */
   max-width: 350px;
   box-shadow: 2px 2px 5px rgb(135, 134, 134);
   border-radius: 15px;
@@ -130,6 +131,7 @@ p {
   font-size: 2rem;
   padding: 3rem;
   text-align: justify;
+  min-inline-size: 30rem;
 }
 
 /* Make projects a flex container for independent organization */
@@ -224,3 +226,29 @@ span[data-info]:hover::after {
   width: 130px;
   /* padding-top: 10px; */
 }
+
+/* Begin adjusting behavior below 1200px width due to design  */
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+  }
+
+  main, article, header {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  nav {
+    font-size: 2rem;
+  }  
+}
+
+/* @media screen and (max-width: 768px) {
+  .projects img {
+    filter: none;
+  }
+
+} */
