@@ -15,9 +15,11 @@
   <body>
     <header>
       <!-- Move about me id here so my name is seen first when someone clicks about me on the fixed nav bar -->
-      <h1 id="about-me">Pete Richards<hr></h1>
+      <h1 id="about-me">
+        Pete Richards
+        <hr />
+      </h1>
       <nav>
-        <hr>
         <ul>
           <li><a href="#about-me">About Me</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -62,19 +64,27 @@
               id="prework"
           /></a>
           <br />
-          <a href="https://prich57.github.io/website-refactor/" target="_blank"
-            ><img
-              src="./assets/images/website_refactor_screenshot.png"
-              alt="Image of website refactor site"
-              id="refactor"
-          /></a>
-          <!-- Include brief description of each project -->
-          <a href="#"
-            ><img
-              src="./assets/images/landing_page_screenshot.png"
-              alt="Image of landing page site"
-              id="landing-page"
-          /></a>
+          <div class="small-images">
+            <a href="https://prich57.github.io/website-refactor/" target="_blank"
+              ><img
+                src="./assets/images/website_refactor_screenshot.png"
+                alt="Image of website refactor site"
+                id="refactor"
+            /></a>
+            <!-- Include brief description of each project -->
+            <a href="#"
+              ><img
+                src="./assets/images/landing_page_screenshot.png"
+                alt="Image of landing page site"
+                id="landing-page"
+            /></a>
+            <a href="#"
+              ><img
+                src="./assets/images/css-cheatsheet.png"
+                alt="Image of CSS Cheatsheet"
+                id="cheatsheet"
+            /></a>
+          </div>
         </article>
       </section>
       <aside>
@@ -110,8 +120,11 @@
 
     <!-- Add contact info with use of linked icons and tooltips -->
     <footer>
-      <h2 id="contact">Contact<hr></h2>
-      <div>
+      <h2 id="contact">
+        Contact
+        <hr />
+      </h2>
+      <div class="footer">
         <a
           href="mailto:pcrichards57@gmail.com?subject = Feedback&body = Message"
         >

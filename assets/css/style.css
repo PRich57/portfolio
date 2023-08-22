@@ -1,7 +1,7 @@
 /* Create variables for reused values */
 :root {
   --white: rgb(196, 196, 196);
-  --navy: rgb(33, 33, 40);
+  --navy: rgb(33, 33, 51);
 }
 
 /* Set box-sizing to border-box to negate size calculation and give no margin or padding */
@@ -39,17 +39,24 @@ h1 {
 
 /* Make gradient underline */
 hr {
-  margin: 10px 0;
-  height: 1px;
+  margin: 5px 0;
+  height: 2px;
   border: none;
-  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, var(--white)));
+  background: -webkit-gradient(
+    linear,
+    0 0,
+    100% 0,
+    from(transparent),
+    to(transparent),
+    color-stop(50%, var(--white))
+  );
 }
 
 /* Make h1 and h2 font stand out with white color */
 h1,
 h2 {
   color: var(--white);
-  /* border-bottom: 2px solid ; */
+  /* border-bottom: 2px; */
 }
 
 /* Nav bar aligned to end so it grows left and looks cleaner and make fixed to top right */
@@ -117,7 +124,7 @@ h2 {
 }
 
 /* Create a div for further flex box stylization */
-div {
+div .footer {
   display: flex;
   justify-content: flex-start;
 }
@@ -134,15 +141,34 @@ div {
 .projects {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  /* align-items: baseline; */
   flex-wrap: wrap;
+
 }
 
 /* Set projects image properties */
 .projects img {
-  max-width: 400px;
+  /* max-width: 400px; */
   filter: blur(3px);
   padding: 10px;
+}
+
+#prework {
+  width: 90rem;
+  height: 100rem;
+  margin;
+}
+
+#cheatsheet,
+#landing-page,
+#refactor {
+  width: 55rem;
+  height: 33rem;
+}
+
+.small-images {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Remove blur when hovering over image */
@@ -259,11 +285,11 @@ span[data-info]:hover::after {
   article {
     flex-direction: column;
   }
-  
+
   header {
     padding: 3rem;
   }
-  
+
   h1 {
     margin-top: 15px;
     font-size: 6rem;
@@ -272,7 +298,7 @@ span[data-info]:hover::after {
   .projects img {
     filter: none;
   }
-  
+
   nav {
     position: fixed;
     top: 0;
@@ -280,7 +306,7 @@ span[data-info]:hover::after {
     width: 100%;
     text-align: center;
   }
-  
+
   nav ul {
     display: flex;
     justify-content: space-evenly;
@@ -289,11 +315,11 @@ span[data-info]:hover::after {
     background-size: cover;
     opacity: 70%;
   }
-  
+
   img {
     max-width: 250px;
   }
-  
+
   .projects {
     align-items: center;
   }
@@ -301,7 +327,6 @@ span[data-info]:hover::after {
 
 /* Begin adjusting layout below 768px width to fit contents within viewport without overlap  */
 @media screen and (max-width: 768px) {
-
   /* Try to make nav a fixed header with a slightly opaque black background
 
   maybe remove the ul all together and make the nav flex column to begin with if I can do
@@ -311,7 +336,6 @@ span[data-info]:hover::after {
 
   !!!or maybe make the nav a fixed hamburger menu when the viewport gets this small!!!
   */
-
 }
 
 /* @media screen and (max-width: 768px) {
