@@ -1,3 +1,9 @@
+/* Create variables for reused values */
+:root {
+  --white: rgb(196, 196, 196);
+  --navy: rgb(33, 33, 40);
+}
+
 /* Set box-sizing to border-box to negate size calculation and give no margin or padding */
 * {
   box-sizing: border-box;
@@ -13,8 +19,8 @@ html {
 
 /* Set background color, font color, and font family */
 body {
-  background-color: rgb(33, 33, 40);
-  color: rgb(196, 196, 196);
+  background-color: var(--navy);
+  color: var(--white);
   font-family: "Nunito", sans-serif;
 }
 
@@ -31,10 +37,19 @@ h1 {
   font-size: 9rem;
 }
 
+/* Make gradient underline */
+hr {
+  margin: 10px 0;
+  height: 1px;
+  border: none;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, var(--white)));
+}
+
 /* Make h1 and h2 font stand out with white color */
 h1,
 h2 {
-  color: white;
+  color: var(--white);
+  /* border-bottom: 2px solid ; */
 }
 
 /* Nav bar aligned to end so it grows left and looks cleaner and make fixed to top right */
