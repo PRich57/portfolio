@@ -113,6 +113,8 @@ article {
   align-items: center;
   width: 100%;
   padding: 10rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
 /* Set specific h2 properties */
@@ -132,7 +134,7 @@ div .footer {
 /* Set specific properties for about me image */
 #my-picture {
   /* align-self: flex-start; */
-  max-width: 350px;
+  max-width: 40rem;
   box-shadow: 2px 2px 5px rgb(135, 134, 134);
   border-radius: 15px;
   margin: 5rem;
@@ -153,17 +155,18 @@ div .footer {
   padding: 10px;
 }
 
-#prework {
+#cheatsheet {
   width: 90rem;
-  height: 100rem;
-  margin;
+  height: 80rem;
+  margin: 10px 30px;
 }
 
-#cheatsheet,
+#prework,
 #landing-page,
 #refactor {
-  width: 55rem;
-  height: 33rem;
+  width: 35rem;
+  height: 23rem;
+  margin: 10px;
 }
 
 .small-images {
@@ -193,29 +196,6 @@ p {
   justify-content: center;
 }
 
-/* #project1 {
-  set the size larger than the other two and blur the image
-  Overlay text "Website Refactor" on blurred image
-  
-  when hovering clear the blur and the text
-  expand the image and add box-shadow
-  or find a different interactive design online
-} */
-
-/* #prework {
-    set the size, location, and blur
-    add same interactivity to this image as above
-    add class to parent container to contain interactivity that will be shared by all three images
-
-    Container can hold blur, text, and interactive hovering/clicking
-    probably only need the refactor id selector and can delete this one and landing-page
- } */
-
-/* #landing-page {
-    set the size, location, and blur
-    add real link after adding its finishing touches and launching
-  } */
-
 /* Make the media icons stick toward bottom left of viewport and stacked */
 aside {
   display: flex;
@@ -225,9 +205,10 @@ aside {
   bottom: 70px;
 }
 
+/* Create style for the media icons */
 .media-icons {
-  max-width: 90px;
-  padding: 15px;
+  max-width: 8rem;
+  padding: 10px;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
@@ -264,12 +245,8 @@ span[data-info]:hover::after {
   box-shadow: 3px 3px 7px rgb(114, 113, 113);
 }
 
-/* TODO: fix email tooltip so it appears to the left so it doesn't cover phone icon */
-
 .icons {
-  /* align-self: baseline; */
-  max-width: 140px;
-  /* margin: 0 10px 28px 28px; */
+  max-width: 14rem;
 }
 
 /* Reduce phone icon to match size of email icon */
@@ -277,6 +254,13 @@ span[data-info]:hover::after {
   height: 128px;
   width: 130px;
   /* padding-top: 10px; */
+}
+
+@media screen and (max-width: 1600px) {
+  #cheatsheet {
+    height: 45rem;
+    width: 55rem;
+  }
 }
 
 /* Remove hover image blur as viewport approaches touchscreen device width */
@@ -316,10 +300,16 @@ span[data-info]:hover::after {
     opacity: 70%;
   }
 
-  img {
-    max-width: 250px;
+  #cheatsheet {
+    max-width: 45rem;
+    max-height: 55rem;
   }
 
+  #prework, #landing-page, #refactor {
+    max-width: 45rem;
+    max-height: 45rem;
+  }
+  
   .projects {
     align-items: center;
   }
@@ -327,17 +317,14 @@ span[data-info]:hover::after {
 
 /* Begin adjusting layout below 768px width to fit contents within viewport without overlap  */
 @media screen and (max-width: 768px) {
-  /* Try to make nav a fixed header with a slightly opaque black background
-
-  maybe remove the ul all together and make the nav flex column to begin with if I can do
-  that and still keep it fixed the way I want it
+  #prework {
+    max-width: 30rem;
+    max-height: 35rem;
+    margin: 10px;
+  }
   
-  if i can then I should make change flex direction to row here and center it
-
-  !!!or maybe make the nav a fixed hamburger menu when the viewport gets this small!!!
-  */
+  #cheatsheet, #landing-page, #refactor {
+    max-width: 30rem;
+    max-height: 25rem;
+  }
 }
-
-/* @media screen and (max-width: 768px) {
-
-} */
