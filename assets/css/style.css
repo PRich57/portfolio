@@ -71,6 +71,7 @@ nav {
 nav li {
   list-style-type: none;
   padding: 0.5rem;
+  color: var(--white);
 }
 
 /* Remove underline from anchors and give them a little extra space */
