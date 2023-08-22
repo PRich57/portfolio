@@ -80,7 +80,7 @@ a {
 }
 
 nav a:hover {
-  font-size: 150%;
+  font-size: 140%;
 }
 
 /* Add style to links when hovering */
@@ -124,7 +124,7 @@ article {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 10rem;
+  padding: 8rem 18rem;
   text-align: center;
   font-size: 2rem;
 }
@@ -164,19 +164,23 @@ p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 /* Set projects image padding and filter */
 .projects img {
-  filter: grayscale(80%);
+  filter: grayscale(90%);
   padding: 10px;
+  margin-bottom: 0px;
+  border-radius: 20px;
 }
 
 /* Set specific sizing and margin for cheatsheet project */
 #cheatsheet {
   width: 90rem;
-  height: 80rem;
-  margin: 10px 30px;
+  height: 81rem;
+  margin: 30px;
+  margin-bottom: 0px;
 }
 
 /* Put small images in their own flex container to adjust positioning */
@@ -185,13 +189,21 @@ p {
   flex-direction: column;
 }
 
+/* Make the project titles a little darker than the headers */
+h3 {
+  color: gray;
+  margin-top: 0px;
+  margin-bottom: 12px;
+}
+
 /* Set specific size and margin for small images */
 #prework,
 #landing-page,
 #refactor {
   width: 35rem;
-  height: 23rem;
-  margin: 10px;
+  height: 22.2rem;
+  margin: 20px;
+  margin-bottom: 0px;
 }
 
 /* Remove blur when hovering over image */
@@ -288,6 +300,14 @@ footer {
   article,
   .row-reverse {
     flex-direction: column;
+  }
+
+  article {
+    padding: 10rem 5rem;
+  }
+
+  .projects {
+    align-items: center;
   }
 
   /* Remove hover filter from project images now that devices may be touch screen */
