@@ -91,7 +91,7 @@ a:hover {
 
 /* Make links stay white rather than turn blue after visiting */
 a:visited {
-  color: rgb(196, 196, 196);
+  color: var(--white);
 }
 
 /* Give main padding on the left and right not top and bottom */
@@ -136,7 +136,7 @@ article {
 /* Set specific properties for about me image */
 #my-picture {
   max-width: 40rem;
-  box-shadow: 2px 2px 5px rgb(135, 134, 134);
+  box-shadow: 2px 2px 5px var(--white);
   border-radius: 15px;
   margin: 5rem;
 }
@@ -197,7 +197,7 @@ p {
 .projects img:hover {
   filter: none;
   padding: 5px;
-  box-shadow: 4px 4px 8px rgb(135, 134, 134);
+  box-shadow: 4px 4px 8px var(--white);
   transition: 0.3s ease-in-out;
 }
 
@@ -221,7 +221,7 @@ aside {
 /* Make tooltip */
 span[data-info] {
   position: relative;
-  color: rgb(196, 196, 196);
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -235,10 +235,10 @@ span[data-info]:hover::after {
   border-radius: 15px;
   background-color: white;
   padding: 12px;
-  color: rgb(33, 33, 40);
+  color: var(--navy);
   font-size: 1.5rem;
   z-index: 1;
-  box-shadow: 3px 3px 7px rgb(114, 113, 113);
+  box-shadow: 3px 3px 7px var(--white);
 }
 
 /* Make footer flex container to adjust icon and text positioning */
