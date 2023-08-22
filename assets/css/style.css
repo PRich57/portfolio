@@ -110,16 +110,6 @@ section {
   padding: 5rem;
 }
 
-/* Set properties for all articles */
-article {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 10rem;
-  text-align: center;
-  font-size: 2rem;
-}
-
 /* Set specific h2 properties */
 h2 {
   font-size: 4rem;
@@ -128,19 +118,40 @@ h2 {
   padding-bottom: 0rem;
 }
 
+/* Set properties for all articles */
+article {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+  padding: 10rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Set specific properties for about me image */
+#my-picture {
+  max-width: 40rem;
+  box-shadow: 2px 2px 5px rgb(135, 134, 134);
+  border-radius: 15px;
+  margin: 5rem;
+}
+
 /* Create a div for further flex box stylization */
+div .about,
 div .footer {
   display: flex;
   justify-content: flex-start;
 }
 
-/* Set specific properties for about me image */
-#my-picture {
-  /* align-self: flex-start; */
-  max-width: 40rem;
-  box-shadow: 2px 2px 5px rgb(135, 134, 134);
-  border-radius: 15px;
-  margin: 5rem;
+/* Style the paragraphs */
+p {
+  font-size: 2rem;
+  padding: 3rem;
+  text-align: justify;
+  min-inline-size: 30rem;
+  margin: 0 10rem;
+  border-left: 1px solid var(--white);
 }
 
 /* Set flex container for the projects */
@@ -150,10 +161,9 @@ div .footer {
   flex-wrap: wrap;
 }
 
-/* Set projects image properties */
+/* Set projects image padding and filter */
 .projects img {
   filter: grayscale(80%);
-  /* border: 5px solid black; */
   padding: 10px;
 }
 
@@ -162,6 +172,12 @@ div .footer {
   width: 90rem;
   height: 80rem;
   margin: 10px 30px;
+}
+
+/* Put small images in their own flex container to adjust positioning */
+.small-images {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Set specific size and margin for small images */
@@ -173,33 +189,12 @@ div .footer {
   margin: 10px;
 }
 
-/* Put small images in their own flex container to adjust positioning */
-.small-images {
-  display: flex;
-  flex-direction: column;
-}
-
 /* Remove blur when hovering over image */
 .projects img:hover {
   filter: none;
   padding: 5px;
   box-shadow: 4px 4px 8px rgb(135, 134, 134);
   transition: 0.3s ease-in-out;
-}
-
-/* Style the paragraphs */
-p {
-  font-size: 2rem;
-  padding: 3rem;
-  text-align: justify;
-  min-inline-size: 30rem;
-}
-
-/* Make projects a flex container for independent organization */
-#projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 /* Make the media icons stick toward bottom left of viewport and stacked */
@@ -217,15 +212,6 @@ aside {
   padding: 10px;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
-}
-
-/* Make footer flex container to adjust icon and text positioning */
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
 }
 
 /* Make tooltip */
@@ -251,19 +237,17 @@ span[data-info]:hover::after {
   box-shadow: 3px 3px 7px rgb(114, 113, 113);
 }
 
-/* Reduce phone icon to match size of email icon */
-#phone {
-  height: 128px;
-  width: 130px;
+/* Make footer flex container to adjust icon and text positioning */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
 /* Add media queries as viewport approaches touchscreen device width */
 @media screen and (max-width: 1280px) {
-  main,
-  article {
-    flex-direction: column;
-  }
-
   /* Adjust padding for header */
   header {
     padding: 3rem;
@@ -274,12 +258,7 @@ span[data-info]:hover::after {
     margin-top: 15px;
     font-size: 6rem;
   }
-
-  /* Remove hover filter from project images now that devices may be touch screen */
-  .projects img {
-    filter: none;
-  }
-
+  
   /* Fix nav to top of page */
   nav {
     position: fixed;
@@ -297,6 +276,17 @@ span[data-info]:hover::after {
     background-color: black;
     background-size: cover;
     opacity: 70%;
+  }
+
+  /* Change flex direction for main and article */
+  main,
+  article {
+    flex-direction: column;
+  }
+
+  /* Remove hover filter from project images now that devices may be touch screen */
+  .projects img {
+    filter: none;
   }
 
   /* Special sizing for cheatsheet project */

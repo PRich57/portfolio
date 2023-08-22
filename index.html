@@ -28,35 +28,48 @@
       </nav>
     </header>
 
+    <!-- Main will contain my about me info and projects -->
     <main>
+      <!-- First section is about me -->
       <section>
+        <!-- h2 will be outside the article so it isn't changed affected by article's style -->
         <h2>About Me</h2>
+        <!-- This article will contain my image and about me info -->
         <article>
           <img
             src="./assets/images/linkedin_profile_pic.jpg"
             alt="Picture of Pete Richards"
             id="my-picture"
           />
-          <!-- Fill in a couple paragraphs of About Me info -->
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-            cupiditate deleniti veritatis repellendus repudiandae quia qui
-            earum! Aliquid illum consectetur quaerat debitis inventore,
-            voluptatibus quo provident consequuntur voluptate at cupiditate
-            omnis sed aliquam, dolorum ad quis vitae. Laborum autem voluptate
-            harum vero modi consectetur officia sint dolores ipsam ut, natus
-            doloremque neque. Saepe porro magnam dolores, distinctio qui autem
-            ad facilis ipsa sunt repudiandae consectetur quidem vel
-            reprehenderit optio corporis amet? Placeat vero tempora cum
-            aspernatur accusamus impedit consectetur, porro amet omnis harum ea
-            eos veniam, earum quasi quisquam iure.
-          </p>
+          <!-- Put paragraphs in div so they can be organized in column -->
+          <div class="about">
+            <!-- Fill in a couple paragraphs of About Me info -->
+            <p>
+              Hey, I'm Pete Richards and I'm a Student in University of Denver's
+              Coding Boot Camp!
+            </p>
+            <p>
+              Back in May 2023, I made the decision to exit sales industry and
+              begin pursuing a career in a field I've been dreaming about for
+              several years: Software Development. Since making this decision in
+              May, I've completed Harvard CS50 on edX.org, signed up for this
+              boot camp, and began working through The Odin Project while
+              waiting for my classes to begin. I've known for years this
+              industry could truly become a passion of mine, but from all the
+              knowledge I've gained over the past three months the one piece of
+              information that's clearer than any other is this: I love
+              everything about coding, creating, collaborating, researching, and
+              problem solving. Whether it be Software or Web Development, I've
+              found my calling!
+            </p>
+          </div>
         </article>
         <h2 id="projects">Projects</h2>
         <article class="projects">
           <!-- Include thumbnail images of projects that work as links to their live sites -->
           <a href="#"
-            ><h3>CSS Snippet Cheatsheet</h3><img
+            ><h3>CSS Snippet Cheatsheet</h3>
+            <img
               src="./assets/images/css-cheatsheet.png"
               alt="Image of CSS Cheatsheet"
               id="cheatsheet"
@@ -66,19 +79,24 @@
             <a
               href="https://prich57.github.io/prework-study-guide/"
               target="_blank"
-              ><h3>Prework Study Guide</h3><img
+              ><h3>Prework Study Guide</h3>
+              <img
                 src="./assets/images/prework_screenshot.png"
                 alt="Image of prework study guide site"
                 id="prework"
             /></a>
-            <a href="https://prich57.github.io/website-refactor/" target="_blank"
-              ><h3>Website Refactor</h3><img
+            <a
+              href="https://prich57.github.io/website-refactor/"
+              target="_blank"
+              ><h3>Website Refactor</h3>
+              <img
                 src="./assets/images/website_refactor_screenshot.png"
                 alt="Image of website refactor site"
                 id="refactor"
             /></a>
             <a href="#"
-              ><h3>Landing Page</h3><img
+              ><h3>Landing Page</h3>
+              <img
                 src="./assets/images/landing_page_screenshot.png"
                 alt="Image of landing page site"
                 id="landing-page"
@@ -86,13 +104,10 @@
           </div>
         </article>
       </section>
+      <!-- Aside will contain link icons to my github and linkedin -->
       <aside>
-        <!-- Add icons that work as links to the respective means of contact -->
-        <a
-          href="https://github.com/PRich57"
-          target="_blank"
-          class="media-links"
-        >
+        <!-- Add icons that work as links to the respective professional pages -->
+        <a href="https://github.com/PRich57" target="_blank">
           <span data-info="Visit my GitHub">
             <img
               src="./assets/images/github-white.png"
@@ -101,11 +116,7 @@
             />
           </span>
         </a>
-        <a
-          href="https://linkedin.com/in/peterrichards57"
-          target="_blank"
-          class="media-links"
-        >
+        <a href="https://linkedin.com/in/peterrichards57" target="_blank">
           <span data-info="Visit my LinkedIn">
             <img
               src="./assets/images/linkedin.png"
@@ -119,7 +130,7 @@
 
     <!-- Add contact info with use of linked icons and tooltips -->
     <footer>
-      <h2 id="contact">
+      <h2>
         Contact
         <hr />
       </h2>
