@@ -79,6 +79,7 @@ a {
   text-decoration: none;
 }
 
+/* Make nav font grow when hovering over */
 nav a:hover {
   font-size: 140%;
 }
@@ -191,7 +192,6 @@ p {
 
 /* Make the project titles a little darker than the headers */
 h3 {
-  color: gray;
   margin-top: 0px;
   margin-bottom: 12px;
 }
@@ -211,7 +211,8 @@ h3 {
   filter: none;
   padding: 5px;
   box-shadow: 4px 4px 8px var(--white);
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
+  color: var(--white);
 }
 
 /* Make the media icons stick toward bottom left of viewport and stacked */
@@ -227,8 +228,8 @@ aside {
 .media-icons {
   max-width: 8rem;
   padding: 10px;
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
+  padding-top: 5px;
+  margin-left: 10px;
 }
 
 /* Make tooltip */
@@ -302,10 +303,12 @@ footer {
     flex-direction: column;
   }
 
+  /* Adjust padding of article at this size so the text field isn't too narrow */
   article {
     padding: 5rem;
   }
 
+  /* Fix alignment of projects class */
   .projects {
     align-items: center;
   }
@@ -327,6 +330,16 @@ footer {
   #refactor {
     max-width: 40rem;
     max-height: 35rem;
+  }
+
+  /* Adjust size of media icons as screen gets smaller */
+  .media-icons {
+    max-width: 7rem;
+  }
+
+  /* Add padding to right because footer becomes off center at this size */
+  footer {
+    padding-right: 2rem;
   }
 }
 

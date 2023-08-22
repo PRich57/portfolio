@@ -33,7 +33,7 @@
       <!-- First section is about me -->
       <section>
         <!-- h2 will be outside the article so it isn't changed affected by article's style -->
-        <h2>About Me</h2>
+        <h2>About Me<hr></h2>
         <!-- This article will contain my image and about me info -->
         <article class="row-reverse">
           <img
@@ -64,19 +64,18 @@
             </p>
           </div>
         </article>
-        <h2 id="projects">Projects</h2>
+        <h2 id="projects">Projects<hr></h2>
         <article class="projects">
           <!-- Include thumbnail images of projects that work as links to their live sites -->
-          <a href="https://prich57.github.io/css-cheatsheet/" target="_blank"
-            >
+          <a href="https://prich57.github.io/css-cheatsheet/" target="_blank">
             <img
               src="./assets/images/css-cheatsheet.png"
               alt="Image of CSS Cheatsheet"
               id="cheatsheet"
-          />
-          <h3>CSS Snippet Cheatsheet</h3>
+            />
+            <h3>CSS Snippet Cheatsheet</h3>
           </a>
-          <br />
+          <!-- These images will have their own class and be smaller -->
           <div class="small-images">
             <a
               href="https://prich57.github.io/prework-study-guide/"
@@ -120,6 +119,7 @@
               src="./assets/images/github-white.png"
               alt="GitHub icon"
               class="media-icons"
+              id="github"
             />
           </span>
         </a>
@@ -129,6 +129,7 @@
               src="./assets/images/linkedin.png"
               alt="LinkedIn icon"
               class="media-icons"
+              id="linkedin"
             />
           </span>
         </a>
@@ -153,6 +154,7 @@
             />
           </span>
         </a>
+        <!-- Input fake number until I have a final portfolio with JS features -->
         <a href="sms:+15555555555">
           <span data-info="Text or Call: 555-555-5555">
             <img
