@@ -56,7 +56,6 @@ hr {
 h1,
 h2 {
   color: var(--white);
-  /* border-bottom: 2px; */
 }
 
 /* Nav bar aligned to end so it grows left and looks cleaner and make fixed to top right */
@@ -79,11 +78,15 @@ a {
   text-decoration: none;
 }
 
+nav a:hover {
+  font-size: 150%;
+}
+
 /* Add style to links when hovering */
 a:hover {
   cursor: pointer;
-  font-size: 150%;
   text-decoration: underline;
+  transition: 0.3s ease-in-out;
 }
 
 /* Make links stay white rather than turn blue after visiting */
@@ -140,27 +143,28 @@ div .footer {
   margin: 5rem;
 }
 
+/* Set flex container for the projects */
 .projects {
   display: flex;
   justify-content: center;
-  /* align-items: baseline; */
   flex-wrap: wrap;
-
 }
 
 /* Set projects image properties */
 .projects img {
-  /* max-width: 400px; */
-  filter: blur(3px);
+  filter: grayscale(80%);
+  /* border: 5px solid black; */
   padding: 10px;
 }
 
+/* Set specific sizing and margin for cheatsheet project */
 #cheatsheet {
   width: 90rem;
   height: 80rem;
   margin: 10px 30px;
 }
 
+/* Set specific size and margin for small images */
 #prework,
 #landing-page,
 #refactor {
@@ -169,6 +173,7 @@ div .footer {
   margin: 10px;
 }
 
+/* Put small images in their own flex container to adjust positioning */
 .small-images {
   display: flex;
   flex-direction: column;
@@ -179,6 +184,7 @@ div .footer {
   filter: none;
   padding: 5px;
   box-shadow: 4px 4px 8px rgb(135, 134, 134);
+  transition: 0.3s ease-in-out;
 }
 
 /* Style the paragraphs */
@@ -245,44 +251,36 @@ span[data-info]:hover::after {
   box-shadow: 3px 3px 7px rgb(114, 113, 113);
 }
 
-.icons {
-  max-width: 14rem;
-}
-
 /* Reduce phone icon to match size of email icon */
 #phone {
   height: 128px;
   width: 130px;
-  /* padding-top: 10px; */
 }
 
-@media screen and (max-width: 1600px) {
-  #cheatsheet {
-    height: 45rem;
-    width: 55rem;
-  }
-}
-
-/* Remove hover image blur as viewport approaches touchscreen device width */
-@media screen and (max-width: 1200px) {
+/* Add media queries as viewport approaches touchscreen device width */
+@media screen and (max-width: 1280px) {
   main,
   article {
     flex-direction: column;
   }
 
+  /* Adjust padding for header */
   header {
     padding: 3rem;
   }
 
+  /* Adjust h1 margin top to fit nav bar and change font */
   h1 {
     margin-top: 15px;
     font-size: 6rem;
   }
 
+  /* Remove hover filter from project images now that devices may be touch screen */
   .projects img {
     filter: none;
   }
 
+  /* Fix nav to top of page */
   nav {
     position: fixed;
     top: 0;
@@ -291,6 +289,7 @@ span[data-info]:hover::after {
     text-align: center;
   }
 
+  /* Adjust opacity of nav bar and make flex container to alter layout */
   nav ul {
     display: flex;
     justify-content: space-evenly;
@@ -300,30 +299,33 @@ span[data-info]:hover::after {
     opacity: 70%;
   }
 
+  /* Special sizing for cheatsheet project */
   #cheatsheet {
     max-width: 45rem;
-    max-height: 55rem;
+    max-height: 35rem;
   }
 
-  #prework, #landing-page, #refactor {
-    max-width: 45rem;
-    max-height: 45rem;
-  }
-  
-  .projects {
-    align-items: center;
+  /* Fix sizing for project images now that viewport size is reduced */
+  #prework,
+  #landing-page,
+  #refactor {
+    max-width: 40rem;
+    max-height: 35rem;
   }
 }
 
 /* Begin adjusting layout below 768px width to fit contents within viewport without overlap  */
 @media screen and (max-width: 768px) {
-  #prework {
-    max-width: 30rem;
-    max-height: 35rem;
-    margin: 10px;
+  /* Further adjustments to size as screen gets smaller*/
+  #cheatsheet {
+    max-width: 38rem;
+    max-height: 30rem;
   }
-  
-  #cheatsheet, #landing-page, #refactor {
+
+  /* Further adjustments */
+  #prework,
+  #landing-page,
+  #refactor {
     max-width: 30rem;
     max-height: 25rem;
   }
