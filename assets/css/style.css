@@ -121,12 +121,16 @@ h2 {
 /* Set properties for all articles */
 article {
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
   width: 100%;
   padding: 10rem;
   text-align: center;
   font-size: 2rem;
+}
+
+/* Reverse direction of first article for appearance */
+.row-reverse {
+  flex-direction: row-reverse;
 }
 
 /* Set specific properties for about me image */
@@ -258,7 +262,7 @@ footer {
     margin-top: 15px;
     font-size: 6rem;
   }
-  
+
   /* Fix nav to top of page */
   nav {
     position: fixed;
@@ -280,7 +284,8 @@ footer {
 
   /* Change flex direction for main and article */
   main,
-  article {
+  article,
+  .row-reverse {
     flex-direction: column;
   }
 
@@ -320,8 +325,6 @@ footer {
     max-height: 25rem;
   }
 }
-
-
 
 /* TODO: LOOK OVER EVERYTHING AGAIN AND LAUNCH CHEATSHEET AND LINK TO HTML BEFORE LAUNCHING THIS 
 FINISH README AND LOOK OVER RUBRIC TO VERIFY I DID EVERYTHING I NEED TO FOR 100% */
