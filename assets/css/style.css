@@ -9,6 +9,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: var(--white);
 }
 
 /* Set font size so rems can scale by 10 */
@@ -20,7 +21,6 @@ html {
 /* Set background color, font color, and font family */
 body {
   background-color: var(--navy);
-  color: var(--white);
   font-family: "Nunito", sans-serif;
 }
 
@@ -52,12 +52,6 @@ hr {
   );
 }
 
-/* Make h1 and h2 font stand out with white color */
-h1,
-h2 {
-  color: var(--white);
-}
-
 /* Nav bar aligned to end so it grows left and looks cleaner and make fixed to top right */
 nav {
   text-align: end;
@@ -71,7 +65,6 @@ nav {
 nav li {
   list-style-type: none;
   padding: 0.5rem;
-  color: var(--white);
 }
 
 /* Remove underline from anchors and give them a little extra space */
@@ -212,7 +205,6 @@ h3 {
   padding: 5px;
   box-shadow: 4px 4px 8px var(--white);
   transition: 0.4s ease-in-out;
-  color: var(--white);
 }
 
 /* Make the media icons stick toward bottom left of viewport and stacked */
