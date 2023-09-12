@@ -172,7 +172,7 @@ p {
 /* Set specific sizing and margin for cheatsheet project */
 #cheatsheet {
   width: 114rem;
-  height: 81rem;
+  height: 75rem;
   margin: 30px;
   margin-bottom: 0px;
 }
@@ -193,8 +193,8 @@ h3 {
 #prework,
 #landing-page,
 #refactor {
-  width: 35rem;
-  height: 22.2rem;
+  width: 32rem;
+  height: 20.2rem;
   margin: 20px;
   margin-bottom: 0px;
 }
