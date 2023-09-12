@@ -171,7 +171,7 @@ p {
 
 /* Set specific sizing and margin for cheatsheet project */
 #cheatsheet {
-  width: 90rem;
+  width: 114rem;
   height: 81rem;
   margin: 30px;
   margin-bottom: 0px;
@@ -312,8 +312,8 @@ footer {
 
   /* Special sizing for cheatsheet project */
   #cheatsheet {
-    max-width: 45rem;
-    max-height: 35rem;
+    max-width: 40rem;
+    max-height: 30rem;
   }
 
   /* Fix sizing for project images now that viewport size is reduced */
