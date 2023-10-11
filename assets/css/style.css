@@ -170,7 +170,7 @@ p {
 }
 
 /* Set specific sizing and margin for cheatsheet project */
-#cheatsheet {
+#dev-row-records {
   width: 114rem;
   height: 75rem;
   margin: 30px;
@@ -190,7 +190,7 @@ h3 {
 }
 
 /* Set specific size and margin for small images */
-#prework,
+#game-seekers,
 #landing-page,
 #refactor {
   width: 32rem;
